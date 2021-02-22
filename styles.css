@@ -21,6 +21,7 @@ margin:auto;
 }
 button:hover{
     cursor:pointer;
+    background-color:rgb(115, 145, 64);
 }
 
 
@@ -40,9 +41,6 @@ button:hover{
     background-color:white;
     padding:0;
     display: grid;
-    /* grid-auto-columns: auto;
-    grid-template-columns:fill;
-    grid-template-rows:fill; */
     grid-template-columns:repeat(auto-fill, minmax(auto, 1fr));
     grid-template-rows:repeat(auto-fill, minmax(auto, 1fr));
     grid-gap:0px;

@@ -1,7 +1,5 @@
 let blocker = document.getElementById('blocker');
 let currentSetting = 4;
-let ex = 4;
-
 
 function create (x){
     if(x < 30){
@@ -32,8 +30,6 @@ function remove() {
     create(currentSetting);
 }
 
-// document.getElementById('clear').addEventListener('click', clear);
-
 function clear(){
     let count = blocker.childElementCount;
     console.log(count);
@@ -42,18 +38,6 @@ function clear(){
     }
     console.log("Works");
 }
-
-
-
-
-blocker.addEventListener('mouseover', function(event){
-    event.target.style.background="indianred";
-    
-
-    // setTimeout(function() {
-    //     event.target.style.background = 'cadetblue';
-    // }, 750);
-}, false);
 
 function resize() {
 
@@ -69,3 +53,6 @@ function resize() {
     }
 }
 
+blocker.addEventListener('mouseover', function(event){
+    event.target.style.background="indianred";
+}, false);
