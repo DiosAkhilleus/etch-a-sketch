@@ -2,16 +2,18 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
-  <title>Page Title</title>
+  <title>Etch-A-Sketch</title>
   <meta charset=“UTF-8”/>
 </head>
-<body onload="create()">
+<body onload="create(8)">
   <h1>Etch-A-Sketch</h1><br>
     <container id="container">
       <div id="blocker"></div>
     </container>
     <br>
-    <button id='clear' onclick="clear()">Clear</button>
+    <button id='clear' onclick="remove()">Clear</button>
+    <br>
+    <button id='resize' onclick="resize()">Resize</button>
     <br>
     <h3>By: DiosAkilleus</h3>
   <script src="index.js"></script>

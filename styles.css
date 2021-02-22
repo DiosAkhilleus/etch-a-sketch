@@ -25,10 +25,10 @@ button:hover{
 
 
 #square {
-    display: grid;
-    width: 49px;
+    /* display: grid; */
+    width: auto;
     /* padding: 1px; */
-    height: 49px;
+    height: auto;
     border:none;
     max-width: inherit;
     max-height: inherit; 
@@ -50,14 +50,14 @@ button:hover{
 
 #container {
    padding:2px;
-   display: grid;
-   grid-template-columns:repeat(8, 1fr);
-   grid-template-rows:repeat(8, 1fr);
+   display: flexbox;
+   /* grid-template-columns:repeat(8, 1fr);
+   grid-template-rows:repeat(8, 1fr); */
    gap: 0px;
    border:2px;
    border-color:black;
-   width: 400px;
-   height: 400px;
+   max-width: 400px;
+   max-height: 400px;
    margin: auto;
    background:black;
    z-index:-2;
@@ -70,14 +70,14 @@ button:hover{
     z-index:1; 
     background-color:white;
     padding:0;
-   display: grid;
-   grid-template-columns:repeat(8, 1fr);
-   grid-template-rows:repeat(8, 1fr);
-   gap: 0px;
-   border:0px;
-   border-color:white;
-   width: 400px;
-   height: 400px;
-   margin: auto;
+    display: grid;
+    grid-template-columns:repeat(8, 1fr);
+    grid-template-rows:repeat(8, 1fr);
+    gap: 0px;
+    border:0px;
+    border-color:white;
+    width: 400px;
+    height: 400px;
+    margin: auto;
    
 }

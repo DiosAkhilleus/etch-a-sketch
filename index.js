@@ -1,6 +1,6 @@
 
-function create (){
-        for(let i = 0; i < 64; i++){
+function create (x){
+        for(let i = 0; i < Math.pow(x,2); i++){
         let x = document.createElement("DIV");
         x.setAttribute('id', 'square');
         x.setAttribute('class', 'fix');
@@ -14,7 +14,7 @@ function remove() {
     for(let i = 0; i < 64; i++){
     blocker.removeChild(document.getElementById('square'));
     }
-    create();
+    create(8);
 }
 
 document.getElementById('clear').addEventListener('click', clear);
@@ -35,4 +35,9 @@ blocker.addEventListener('mouseover', function(event){
     //     event.target.style.background = 'cadetblue';
     // }, 750);
 }, false);
+
+function resize() {
+    let size = prompt("Choose a size");
+    create(size);
+}
 
