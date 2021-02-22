@@ -1,30 +1,49 @@
+let blocker = document.getElementById('blocker');
+let currentSetting = 4;
+let ex = 4;
+
 
 function create (x){
+    if(x < 30){
+        let y = document.getElementById('blocker');
         for(let i = 0; i < Math.pow(x,2); i++){
-        let x = document.createElement("DIV");
-        x.setAttribute('id', 'square');
-        x.setAttribute('class', 'fix');
-        document.getElementById('blocker').appendChild(x);
+            let z = document.createElement("DIV");
+            z.setAttribute('id', 'square');
+            z.setAttribute('class', 'fix');
+            document.getElementById('blocker').appendChild(z);
+            }
+        y.style.gridTemplateRows = `repeat(${x}, 1fr)`;
+        y.style.gridTemplateColumns = `repeat(${x}, 1fr)`;
+        currentSetting = x;
+        console.log(currentSetting);
+    }
+        else {
+            alert("Too Large");
+            resize();
         }
 }
 
 function remove() {
 
-    let square = document.getElementById('square');
-    for(let i = 0; i < 64; i++){
+    let count = blocker.childElementCount;
+    for(let i = 0; i < count; i++){
     blocker.removeChild(document.getElementById('square'));
     }
-    create(8);
+    create(currentSetting);
 }
 
-document.getElementById('clear').addEventListener('click', clear);
+// document.getElementById('clear').addEventListener('click', clear);
 
 function clear(){
+    let count = blocker.childElementCount;
+    console.log(count);
+    for(let i = 0; i < count; i++){
+    blocker.removeChild(document.getElementById('square'));
+    }
     console.log("Works");
-    remove();
 }
 
-let blocker = document.getElementById('blocker');
+
 
 
 blocker.addEventListener('mouseover', function(event){
@@ -37,7 +56,16 @@ blocker.addEventListener('mouseover', function(event){
 }, false);
 
 function resize() {
+
+    let def = currentSetting;
     let size = prompt("Choose a size");
-    create(size);
+    if(size !== ""){
+        clear();
+        create(size);
+    }
+    if(size === null) {
+        clear();
+        create(def);
+    }
 }
 

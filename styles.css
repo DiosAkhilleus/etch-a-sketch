@@ -25,13 +25,9 @@ button:hover{
 
 
 #square {
-    /* display: grid; */
-    width: auto;
-    /* padding: 1px; */
-    height: auto;
+    width:auto;
+    height:auto;
     border:none;
-    max-width: inherit;
-    max-height: inherit; 
     background:cadetblue;
     z-index:2;
     outline:white;
@@ -39,45 +35,21 @@ button:hover{
     outline-color:white;
 }
 
-/* .fix{
-    background: indianred;
-}
-
-.fix:hover{
-    background: lightgoldenrodyellow;
-    
-} */
-
-#container {
-   padding:2px;
-   display: flexbox;
-   /* grid-template-columns:repeat(8, 1fr);
-   grid-template-rows:repeat(8, 1fr); */
-   gap: 0px;
-   border:2px;
-   border-color:black;
-   max-width: 400px;
-   max-height: 400px;
-   margin: auto;
-   background:black;
-   z-index:-2;
-   outline-width:1px;
-   outline-color:white;
-   
-}
-
 #blocker{
     z-index:1; 
     background-color:white;
     padding:0;
     display: grid;
-    grid-template-columns:repeat(8, 1fr);
-    grid-template-rows:repeat(8, 1fr);
-    gap: 0px;
+    /* grid-auto-columns: auto;
+    grid-template-columns:fill;
+    grid-template-rows:fill; */
+    grid-template-columns:repeat(auto-fill, minmax(auto, 1fr));
+    grid-template-rows:repeat(auto-fill, minmax(auto, 1fr));
+    grid-gap:0px;
     border:0px;
     border-color:white;
     width: 400px;
     height: 400px;
     margin: auto;
-   
+    background:indianred;
 }
