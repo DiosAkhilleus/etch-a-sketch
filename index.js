@@ -2,7 +2,7 @@ let blocker = document.getElementById('blocker');
 let currentSetting = 4;
 
 function create (x){
-    if(x < 30){
+    if(x <= 40){
         let y = document.getElementById('blocker');
         for(let i = 0; i < Math.pow(x,2); i++){
             let z = document.createElement("DIV");
